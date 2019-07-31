@@ -1,0 +1,57 @@
+project_name: Rindus task
+author: Salvador Leon
+version: 1
+language_locale: es
+
+root_folder: ./src
+output_folder: ./docs
+readme_file: ./README.md
+indexes: False
+
+excludes:
+  - accounts_administrator.settings.py
+  - accounts_administrator.urls.py
+  - accounts_administrator.wsgi.py
+  - static
+
+ignores:
+  - tests.py
+  - urls.py
+  - apps.py
+  - admin.py
+  - manage.py
+  - migrations
+
+mocks_imports:
+  - django
+
+
+####################################################
+#                  COMPILING CONFIG                #
+####################################################
+makes:
+  - html
+  #- pdf
+
+####################################################
+#                    HTML CONFIG                   #
+####################################################
+html_config:
+  template_theme: alabaster
+  #custom_css:
+  #template_package: sphinx_theme
+  #template_path: sphinx_theme.get_html_theme_path('stanford-theme')
+  #template_extensions:
+  # - ext_1
+  # - ext_2
+  template_options:
+    logo: src/static/logo.svg
+    fixed_sidebar: True
+    description: Coding Task Rindus
+
+####################################################
+#                 LaTeX PDF CONFIG                 #
+####################################################
+latex_config:
+  latex_engine: pdflatex
+  latex_logo: src/static/logo.svg
