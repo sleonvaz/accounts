@@ -17,7 +17,7 @@ ALLOWED_HOSTS = []
 ####################################################################################################
 PROJECT_APPS = [
     'applications.core',
-    'applications.users',
+    'applications.clients',
 
 ]
 INSTALLED_APPS = [
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'accounts_administrator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
