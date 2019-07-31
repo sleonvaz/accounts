@@ -18,7 +18,7 @@ ALLOWED_HOSTS = []
 PROJECT_APPS = [
     'applications.core',
     'applications.clients',
-
+    'social_django',
 ]
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,6 +44,28 @@ MIDDLEWARE = [
 ]
 
 ####################################################################################################
+#                                         AUTHENTICATION_BACKENDS                                  #
+####################################################################################################
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+####################################################################################################
+#                                         GOOGLE SOCIAL CONFIGURATION                              #
+####################################################################################################
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '671554445159-383ul1too3hfljf04au2hv3ii8cusknk.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'pe-fZ2N9SLvb05Ne1F8i7cVK'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+LOGIN_URL = '/auth/login/google-oauth2/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+####################################################################################################
 #                                           URL_CONF                                               #
 ####################################################################################################
 
@@ -65,22 +87,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
             ],
         },
     },
-]
-
-
-
-####################################################################################################
-#                                           AUTHENTICATION_BACKENDS                                #
-####################################################################################################
-
-AUTHENTICATION_BACKENDS = [
-
-
-
 ]
 
 ####################################################################################################
