@@ -16,6 +16,8 @@ ALLOWED_HOSTS = []
 #                                         APPLICATIONS                                             #
 ####################################################################################################
 PROJECT_APPS = [
+    'applications.core',
+    'applications.users',
 
 ]
 INSTALLED_APPS = [
@@ -63,9 +65,22 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
+]
+
+
+
+####################################################################################################
+#                                           AUTHENTICATION_BACKENDS                                #
+####################################################################################################
+
+AUTHENTICATION_BACKENDS = [
+
+
+
 ]
 
 ####################################################################################################
@@ -114,7 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 #                                       INTERNACIONALIZATION                                       #
 ####################################################################################################
 
-LANGUAGE_CODE = os.environ.get('LANGUAGE_CODE')
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = os.environ.get('TZ')
 
