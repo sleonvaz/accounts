@@ -63,9 +63,9 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'pe-fZ2N9SLvb05Ne1F8i7cVK'
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-LOGIN_URL = '/auth/login/google-oauth2/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/clients'
+LOGOUT_REDIRECT_URL = '/accounts/login'
 
 ####################################################################################################
 #                                           URL_CONF                                               #
