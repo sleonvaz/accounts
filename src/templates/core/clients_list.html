@@ -23,7 +23,7 @@
             <td class="border border-dark">{{ client.name }}</td>
             <td class="border border-dark">{{ client.last_name }}</td>
             <td class="border border-dark">{{ client.iban }}</td>
-            {% if client.user_id == request.user.id %}
+            {% if client.Admin_id == request.user.id %}
             <td>
             <a  href="{% url 'clients_detail'  client.id  %}">details</a>
             <a  href="{% url 'clients_update'  client.id  %}">edit</a>
