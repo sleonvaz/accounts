@@ -17,8 +17,10 @@ ALLOWED_HOSTS = []
 ####################################################################################################
 PROJECT_APPS = [
     'applications.core',
-    'applications.clients',
+    'applications.client',
     'social_django',
+    'applications.access',
+    'crispy_forms',
 ]
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,6 +89,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
