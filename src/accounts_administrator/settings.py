@@ -48,10 +48,12 @@ MIDDLEWARE = [
 ####################################################################################################
 #                                         AUTHENTICATION_BACKENDS                                  #
 ####################################################################################################
+AUTH_USER_MODEL = 'core.Clients'
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+
 )
 
 ####################################################################################################
@@ -66,6 +68,7 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/clients'
 LOGOUT_REDIRECT_URL = '/accounts/login'
+
 
 ####################################################################################################
 #                                           URL_CONF                                               #
@@ -91,6 +94,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
             ],
+
+            'libraries': {
+                'my_templatetag': 'applications.client.templatetags',
+
+            }
         },
     },
 ]

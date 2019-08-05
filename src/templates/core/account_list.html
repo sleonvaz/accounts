@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container ">
+  <div class="row justify-content-center">
+   <h1>Client</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-2 p-3">
+       {% if request.user.is_staff %}
+      <a href="{% url 'signup_manager' %}" class="btn btn-primary ml-2">Create User</a>
+      {% endif %}
+    </div>
+    <div class="col-8 p-3">
+      <table class="border border-dark">
+        <thead>
+
+        </thead>
+        <tbody>
+        {% load my_templatetag %}
+        <div class="row">
+        {% if request.user.is_staff %}
+          {% for client in object_list %}
+            {% if not client.is_staff %}
+            <div class="col-5">
+              <div class="card">
+                <div class="card-header">
+                  IBAN: {{ client.iban }}
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Name: {{ client.name }}</p>
+                  <p class="card-text">Last name: {{client.last_name }}</p>
+                  <p class="card-text">Email: {{ client.email }}</p>
+                   {% if client|has_group:request.user.email or request.user.is_superuser %}
+                  <a href="{% url 'clients_update'  client.id  %}" class="btn btn-primary">update</a>
+                  <a href="{% url 'clients_delete'  client.id  %}" class="btn btn-primary">delete</a>
+                  {% endif %}
+                </div>
+              </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          </div>
+        {% else %}
+        {% for client in object_list %}
+            {% if request.user.is_staff %}
+          <div class="card">
+              <div class="card-header">
+                IBAN: {{ request.user.name }}
+              </div>
+              <div class="card-body">
+                <p class="card-text">Name: {{ request.user.name }}</p>
+                <p class="card-text">Last name: {{ request.user.last_name }}</p>
+                <p class="card-text">Email: {{ request.user.email }}</p>
+                <a href="{% url 'clients_update'  request.user.id  %}" class="btn btn-primary">update</a>
+                <a href="{% url 'clients_delete'  request.user.id  %}" class="btn btn-primary">delete</a>
+              </div>
+          </div>
+        {% endif %}
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+
+{% endblock %}
