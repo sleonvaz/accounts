@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -41,6 +42,10 @@ class ClientUpdate(UpdateView):
             "email",
             "iban"]
 
+    def get_success_url(self):
+        view_name = 'client_list'
+        # No need for reverse_lazy here, because it's called inside the method
+        return reverse(view_name)
 
 @method_decorator(login_required, name='dispatch')
 class ClientDelete(DeleteView):

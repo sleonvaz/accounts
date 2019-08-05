@@ -23,8 +23,6 @@ def signup(request):
         if form.is_valid():
             form.save()
             max_id = Clients.objects.all().aggregate(Max('id'))['id__max']
-            a = Account.objects.all()
-            a = Account.objects.filter(clients_ptr=request.user).iban
             user = Clients.objects.filter(id=max_id)
             user.update(is_staff=False)
             if not Clients.objects.filter(email='admin@rindus.com').exists():

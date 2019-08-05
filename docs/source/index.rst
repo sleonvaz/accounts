@@ -7,6 +7,7 @@
    
    accounts_administrator
    applications
+   templates
 
 .. mdinclude :: C:\Users\sleon\repositorios\prueba\rindus-task\README.md
     
