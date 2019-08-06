@@ -47,6 +47,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="accounts_administrator.html"><strong>accounts_administrator</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="applications.html"><strong>applications</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html"><strong>helpers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="middlewares.html"><strong>middlewares</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="templates.html"><strong>templates</strong></a></li>
 </ul>
 
@@ -101,6 +103,7 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  
 </div>
 <h2 id="A">A</h2>
@@ -142,13 +145,21 @@
 </li>
       <li><a href="applications.access.html#applications.access.form.ClientRegistrationForm.Meta">ClientRegistrationForm.Meta (clase en applications.access.form)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="applications.core.html#applications.core.models.Clients">Clients (clase en applications.core.models)</a>
 </li>
+      <li><a href="helpers.startup.html#helpers.startup.__init__.create_default_superadmin">create_default_superadmin() (en el módulo helpers.startup.__init__)</a>
+
+      <ul>
+        <li><a href="helpers.startup.html#helpers.startup.ready.create_default_superadmin">(en el módulo helpers.startup.ready)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="applications.core.html#applications.core.models.UserManager.create_superuser">create_superuser() (método de applications.core.models.UserManager)</a>
 </li>
       <li><a href="applications.core.html#applications.core.models.UserManager.create_user">create_user() (método de applications.core.models.UserManager)</a>
+</li>
+      <li><a href="helpers.logger.html#helpers.logger.custom_logger.CustomLogger">CustomLogger (clase en helpers.logger.custom_logger)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -174,6 +185,20 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="applications.client.templatetags.html#applications.client.templatetags.__init__.has_group">has_group() (en el módulo applications.client.templatetags.__init__)</a>
 </li>
+      <li><a href="helpers.html#module-helpers.__init__">helpers.__init__ (módulo)</a>
+</li>
+      <li><a href="helpers.logger.html#module-helpers.logger.__init__">helpers.logger.__init__ (módulo)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="helpers.logger.html#module-helpers.logger.custom_logger">helpers.logger.custom_logger (módulo)</a>
+</li>
+      <li><a href="helpers.logger.html#module-helpers.logger.logger_manager">helpers.logger.logger_manager (módulo)</a>
+</li>
+      <li><a href="helpers.startup.html#module-helpers.startup.__init__">helpers.startup.__init__ (módulo)</a>
+</li>
+      <li><a href="helpers.startup.html#module-helpers.startup.ready">helpers.startup.ready (módulo)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -181,6 +206,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="applications.core.html#applications.core.models.Account.iban">iban (atributo de applications.core.models.Account)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="middlewares.html#middlewares.inject_trace.InjectTrace">InjectTrace (clase en middlewares.inject_trace)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -191,11 +220,25 @@
       <li><a href="applications.core.html#applications.core.models.Clients.last_name">last_name (atributo de applications.core.models.Clients)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="helpers.logger.html#helpers.logger.__init__.LoggerManager">LoggerManager (clase en helpers.logger.__init__)</a>
+
+      <ul>
+        <li><a href="helpers.logger.html#helpers.logger.logger_manager.LoggerManager">(clase en helpers.logger.logger_manager)</a>
+</li>
+      </ul></li>
+  </ul></td>
 </tr></table>
 
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="middlewares.html#module-middlewares.__init__">middlewares.__init__ (módulo)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="middlewares.html#module-middlewares.inject_trace">middlewares.inject_trace (módulo)</a>
+</li>
       <li><a href="applications.access.html#applications.access.form.ClientRegistrationForm.Meta.model">model (atributo de applications.access.form.ClientRegistrationForm.Meta)</a>
 </li>
   </ul></td>
@@ -228,10 +271,12 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="applications.access.html#applications.access.views.signup">signup() (en el módulo applications.access.views)</a>
+      <li><a href="helpers.logger.html#helpers.logger.custom_logger.CustomLogger.set_logger">set_logger() (método de helpers.logger.custom_logger.CustomLogger)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="applications.access.html#applications.access.views.signup">signup() (en el módulo applications.access.views)</a>
+</li>
       <li><a href="applications.access.html#applications.access.views.signup_manager">signup_manager() (en el módulo applications.access.views)</a>
 </li>
   </ul></td>
@@ -262,6 +307,32 @@
 </li>
       <li><a href="applications.core.html#applications.core.models.Clients.USERNAME_FIELD">USERNAME_FIELD (atributo de applications.core.models.Clients)</a>
 </li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="helpers.logger.html#helpers.logger.__init__.LoggerManager.write_error">write_error() (método de helpers.logger.__init__.LoggerManager)</a>
+
+      <ul>
+        <li><a href="helpers.logger.html#helpers.logger.logger_manager.LoggerManager.write_error">(método de helpers.logger.logger_manager.LoggerManager)</a>
+</li>
+      </ul></li>
+      <li><a href="helpers.logger.html#helpers.logger.__init__.LoggerManager.write_exception">write_exception() (método de helpers.logger.__init__.LoggerManager)</a>
+
+      <ul>
+        <li><a href="helpers.logger.html#helpers.logger.logger_manager.LoggerManager.write_exception">(método de helpers.logger.logger_manager.LoggerManager)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="helpers.logger.html#helpers.logger.__init__.LoggerManager.write_info">write_info() (método de helpers.logger.__init__.LoggerManager)</a>
+
+      <ul>
+        <li><a href="helpers.logger.html#helpers.logger.logger_manager.LoggerManager.write_info">(método de helpers.logger.logger_manager.LoggerManager)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 

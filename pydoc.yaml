@@ -9,9 +9,6 @@ readme_file: ./README.md
 indexes: False
 
 excludes:
-  - accounts_administrator.settings.py
-  - accounts_administrator.urls.py
-  - accounts_administrator.wsgi.py
   - static
 
 ignores:

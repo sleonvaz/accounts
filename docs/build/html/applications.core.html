@@ -15,7 +15,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="templates" href="templates.html" />
+    <link rel="next" title="helpers" href="helpers.html" />
     <link rel="prev" title="templatetags" href="applications.client.templatetags.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -51,6 +51,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="applications.html#submodulos"><strong>Submódulos</strong></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html"><strong>helpers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="middlewares.html"><strong>middlewares</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="templates.html"><strong>templates</strong></a></li>
 </ul>
 
@@ -60,7 +62,7 @@
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="applications.html"><strong>applications</strong></a><ul>
       <li>Previous: <a href="applications.client.templatetags.html" title="capítulo anterior"><strong>templatetags</strong></a></li>
-      <li>Next: <a href="templates.html" title="próximo capítulo"><strong>templates</strong></a></li>
+      <li>Next: <a href="helpers.html" title="próximo capítulo"><strong>helpers</strong></a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -93,12 +95,14 @@
             
   <div class="section" id="module-applications.core.__init__">
 <span id="core"></span><h1><strong>core</strong><a class="headerlink" href="#module-applications.core.__init__" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>This app is to manage the models and migrations.</p>
 <div class="section" id="module-applications.core.models">
 <span id="models"></span><h2><strong>models</strong><a class="headerlink" href="#module-applications.core.models" title="Enlazar permanentemente con este título">¶</a></h2>
 <dl class="class">
 <dt id="applications.core.models.UserManager">
 <em class="property">class </em><code class="sig-prename descclassname">applications.core.models.</code><code class="sig-name descname">UserManager</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.core.models.UserManager" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Class to create a base user to inherit for</p>
+<dl class="attribute">
 <dt id="applications.core.models.UserManager.use_in_migrations">
 <code class="sig-name descname">use_in_migrations</code><em class="property"> = True</em><a class="headerlink" href="#applications.core.models.UserManager.use_in_migrations" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
@@ -106,19 +110,52 @@
 <dl class="method">
 <dt id="applications.core.models.UserManager.create_user">
 <code class="sig-name descname">create_user</code><span class="sig-paren">(</span><em class="sig-param">email</em>, <em class="sig-param">password=None</em>, <em class="sig-param">**extra_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.core.models.UserManager.create_user" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Function to create and save a user with the given account_no and password.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<em>str</em>) – Email to save on the DB.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Password to save on the DB.</p></li>
+<li><p><strong>extra_fields</strong> – Extra fields to save on the DB.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The user created</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>UserManager:</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="applications.core.models.UserManager.create_superuser">
 <code class="sig-name descname">create_superuser</code><span class="sig-paren">(</span><em class="sig-param">email</em>, <em class="sig-param">password</em>, <em class="sig-param">**extra_fields</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.core.models.UserManager.create_superuser" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Function to create and save a superuser with the given account_no and password and the privileges added.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<em>str</em>) – Email to save on the DB.</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Password to save on the DB.</p></li>
+<li><p><strong>extra_fields</strong> – Extra fields to save on the DB.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The superuser created</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>UserManager:</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="applications.core.models.Clients">
 <em class="property">class </em><code class="sig-prename descclassname">applications.core.models.</code><code class="sig-name descname">Clients</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.core.models.Clients" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Class to create a Client user</p>
+<dl class="attribute">
 <dt id="applications.core.models.Clients.username">
 <code class="sig-name descname">username</code><a class="headerlink" href="#applications.core.models.Clients.username" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>
@@ -141,7 +178,8 @@
 <dl class="attribute">
 <dt id="applications.core.models.Clients.objects">
 <code class="sig-name descname">objects</code><a class="headerlink" href="#applications.core.models.Clients.objects" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Class to create a base user to inherit for</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="applications.core.models.Clients.USERNAME_FIELD">
@@ -158,7 +196,8 @@
 <dl class="class">
 <dt id="applications.core.models.Account">
 <em class="property">class </em><code class="sig-prename descclassname">applications.core.models.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.core.models.Account" title="Enlazar permanentemente con esta definición">¶</a></dt>
-<dd><dl class="attribute">
+<dd><p>Class to create a Account.</p>
+<dl class="attribute">
 <dt id="applications.core.models.Account.iban">
 <code class="sig-name descname">iban</code><a class="headerlink" href="#applications.core.models.Account.iban" title="Enlazar permanentemente con esta definición">¶</a></dt>
 <dd></dd></dl>

@@ -1,13 +1,6 @@
-
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import logout
-
-# from applications.logger.views import LogOutView
-
-
-
-from accounts_administrator import settings
+from helpers.startup import create_default_superadmin
 
 urlpatterns = [
 
@@ -15,5 +8,6 @@ urlpatterns = [
     path('', include('social_django.urls', namespace='social')),
     path('', include('applications.access.urls')),
     path('', include('applications.client.urls')),
-    # path('logout/', LogOutView.as_view(), name='logout'),
 ]
+
+create_default_superadmin()

@@ -9,7 +9,13 @@ from applications.core.models import Account
 @method_decorator(login_required, name='dispatch')
 class ClientList(ListView):
     """
-        Class to manage client list  url view
+
+        Class to manage the Accounts list.
+
+        :param request: This param contain all the information associated to the request.
+        :param type request: Request
+        :return: The view to render.
+        :rtype: View
     """
     model = Account
 
@@ -17,16 +23,28 @@ class ClientList(ListView):
 @method_decorator(login_required, name='dispatch')
 class ClientDetail(DetailView):
     """
-           Class to manage an specific client url view
-    """
+
+         Class to manage the Accounts deail.
+
+         :param request: This param contain all the information associated to the request.
+         :param type request: Request
+         :return: The view to render.
+         :rtype: View
+     """
     model = Account
 
 
 @method_decorator(login_required, name='dispatch')
 class ClientCreate(CreateView):
     """
-              Class to create client url view
-    """
+
+         Class to manage the Accounts create.
+
+         :param request: This param contain all the information associated to the request.
+         :param type request: Request
+         :return: The view to render.
+         :rtype: View
+     """
     model = Account
     fields = '__all__'
 
@@ -34,22 +52,49 @@ class ClientCreate(CreateView):
 @method_decorator(login_required, name='dispatch')
 class ClientUpdate(UpdateView):
     """
-              Class to update an specific client url view
-    """
+
+         Class to manage the Accounts update.
+
+         :param request: This param contain all the information associated to the request.
+         :param type request: Request
+         :return: The view to render.
+         :rtype: View
+     """
     model = Account
-    fields = ["name",
-            "last_name",
-            "email",
-            "iban"]
+    fields = ["name", "last_name", "email", "iban"]
 
     def get_success_url(self):
+        """
+
+        Function to manage the view tp render after update.
+
+        :return: The URL to render.
+        :rtype: str
+        """
         view_name = 'client_list'
-        # No need for reverse_lazy here, because it's called inside the method
         return reverse(view_name)
+
 
 @method_decorator(login_required, name='dispatch')
 class ClientDelete(DeleteView):
     """
-              Class to delete an specific client url view
+
+        Class to manage the Accounts delete.
+
+        :param request: This param contain all the information associated to the request
+        :param type request: Request
+        :return: The view to render
+        :rtype: View
     """
     model = Account
+
+    def get_success_url(self):
+        """
+
+           Function to manage the view tp render after delete.
+
+           :return: The URL to rende.
+           :rtype: str
+           """
+        view_name = 'client_list'
+        return reverse(view_name)
