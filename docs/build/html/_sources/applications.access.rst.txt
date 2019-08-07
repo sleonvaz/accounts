@@ -5,9 +5,9 @@
 .. automodule:: applications.access.__init__
    :members:
 
-**form**
-##############################
-.. automodule:: applications.access.form
+**forms**
+###############################
+.. automodule:: applications.access.forms
    :members:
  
 **views**

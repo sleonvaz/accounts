@@ -109,7 +109,7 @@ class Account(Clients):
         _('IBAN'), max_length=30, unique=False, null=True, blank=True,
         help_text=_(
             'Ex: CC12 XXXX 12XX 1234 1234 1234 1234 1234 123'
-            'Required. between 15 and 30 characters. Two first digits for country code(capitalized) , '
+            ' Required. between 15 and 30 characters. Two first digits for country code(capitalized) , '
             'and account number.'
             ' You must leave the spaces between each numbers group. '
         ),

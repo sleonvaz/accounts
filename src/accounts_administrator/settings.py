@@ -99,7 +99,6 @@ TEMPLATES = [
 
             'libraries': {
                 'my_templatetag': 'applications.client.templatetags',
-
             }
         },
     },

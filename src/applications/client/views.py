@@ -17,6 +17,7 @@ class ClientList(ListView):
         :return: The view to render.
         :rtype: View
     """
+
     model = Account
 
 

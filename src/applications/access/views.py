@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import Group
-from applications.access.form import ClientRegistrationForm, AdminRegistrationForm
+from applications.access.forms import ClientRegistrationForm, AdminRegistrationForm
 from applications.core.models import Clients, Account
 from django.db.models import Max
 from helpers.logger import LoggerManager
@@ -62,7 +62,7 @@ def signup_user(request):
             form = ClientRegistrationForm(request.POST)
             if form.is_valid():
                 form.save()
-                create_default_superadmin()
+
                 max_id = Account.objects.all().aggregate(Max('id'))['id__max']
                 user = Account.objects.filter(id=max_id)
                 web_group, created = Group.objects.get_or_create(name=request.user.email)

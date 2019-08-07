@@ -1,5 +1,7 @@
 from django import template
-
+from django.db.utils import OperationalError
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
 
 register = template.Library()
 
@@ -16,3 +18,4 @@ def has_group(user, group_name):
         :rtype: bool
     """
     return user.groups.filter(name=group_name).exists()
+
