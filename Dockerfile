@@ -14,6 +14,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./src /app
 
+RUN mkdir /app/logs
 RUN mkdir -p /vol/web/media
 RUN mkdir -p /vol/web/static
 RUN adduser -D user
