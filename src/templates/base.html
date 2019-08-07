@@ -37,7 +37,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% if user.is_staff %}
-                <a href="{% url 'signup_user' %}" class="btn btn-primary ml-2">Create User</a>
+                <a href="{% url 'client_list' %}"><h5>Home</h5></a>
+                <a href="{% url 'signup_user' %}" class="btn btn-primary ml-5">Create User</a>
             {% endif %}
             {% if user.is_superuser %}
                 <a href="{% url 'signup_manager' %}" class="btn btn-primary ml-2">Create Admin</a>

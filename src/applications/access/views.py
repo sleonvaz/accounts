@@ -6,6 +6,7 @@ from applications.access.form import ClientRegistrationForm, AdminRegistrationFo
 from applications.core.models import Clients, Account
 from django.db.models import Max
 from helpers.logger import LoggerManager
+from helpers.startup import create_default_superadmin
 
 
 def signup(request):
@@ -61,7 +62,7 @@ def signup_user(request):
             form = ClientRegistrationForm(request.POST)
             if form.is_valid():
                 form.save()
-
+                create_default_superadmin()
                 max_id = Account.objects.all().aggregate(Max('id'))['id__max']
                 user = Account.objects.filter(id=max_id)
                 web_group, created = Group.objects.get_or_create(name=request.user.email)

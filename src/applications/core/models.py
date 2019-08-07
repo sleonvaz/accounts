@@ -122,3 +122,4 @@ class Account(Clients):
         error_messages={
             'unique': _("A user with that IBAN already exists."),
         })
+    USERNAME_FIELD = 'email'

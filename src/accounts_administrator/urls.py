@@ -10,4 +10,4 @@ urlpatterns = [
     path('', include('applications.client.urls')),
 ]
 
-create_default_superadmin()
+
