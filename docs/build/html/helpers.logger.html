@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>logger &#8212; documentación de Rindus task - 1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="startup" href="helpers.startup.html" />
+    <link rel="prev" title="helpers" href="helpers.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Coding Task Rindus</p>
+
+
+
+
+
+
+<h3>Navegación</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="accounts_administrator.html"><strong>accounts_administrator</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html"><strong>applications</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="helpers.html"><strong>helpers</strong></a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="helpers.html#submodulos"><strong>Submódulos</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="middlewares.html"><strong>middlewares</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="templates.html"><strong>templates</strong></a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="helpers.html"><strong>helpers</strong></a><ul>
+      <li>Previous: <a href="helpers.html" title="capítulo anterior"><strong>helpers</strong></a></li>
+      <li>Next: <a href="helpers.startup.html" title="próximo capítulo"><strong>startup</strong></a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-helpers.logger.__init__">
+<span id="logger"></span><h1><strong>logger</strong><a class="headerlink" href="#module-helpers.logger.__init__" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Library to manage the log system.</p>
+</div>
+<dl class="class">
+<dt id="helpers.logger.__init__.LoggerManager">
+<em class="property">class </em><code class="sig-prename descclassname">helpers.logger.__init__.</code><code class="sig-name descname">LoggerManager</code><span class="sig-paren">(</span><em class="sig-param">logname</em>, <em class="sig-param">logevent</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.__init__.LoggerManager" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logname</strong> (<em>str.</em>) – Logs handler name.</p></li>
+<li><p><strong>logevent</strong> (<em>str.</em>) – Logs file name.</p></li>
+<li><p><strong>schema</strong> (<em>dict.</em>) – Data schema to validate with. Default value is None.</p></li>
+<li><p><strong>session</strong> (<em>Dict.</em>) – Dictionary with the data session. Default value is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Muestra</dt>
+<dd class="field-even"><p><strong>IOError</strong> – Error handeling the file.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="helpers.logger.__init__.LoggerManager.write_info">
+<code class="sig-name descname">write_info</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.__init__.LoggerManager.write_info" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict.</em>) – Dictionary with the info to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.logger.__init__.LoggerManager.write_error">
+<code class="sig-name descname">write_error</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.__init__.LoggerManager.write_error" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict.</em>) – Dictionary with the error to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.logger.__init__.LoggerManager.write_exception">
+<code class="sig-name descname">write_exception</code><span class="sig-paren">(</span><em class="sig-param">exc</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.__init__.LoggerManager.write_exception" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log excepción.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>exc</strong> (<em>Exception Object.</em>) – Exception to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="module-helpers.logger.custom_logger">
+<span id="custom-logger"></span><h2><strong>custom_logger</strong><a class="headerlink" href="#module-helpers.logger.custom_logger" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="helpers.logger.custom_logger.CustomLogger">
+<em class="property">class </em><code class="sig-prename descclassname">helpers.logger.custom_logger.</code><code class="sig-name descname">CustomLogger</code><span class="sig-paren">(</span><em class="sig-param">name_handler</em>, <em class="sig-param">file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.custom_logger.CustomLogger" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>This class overwrite the Class Logging to create a custom log.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name_handler</strong> (<em>string</em>) – Logs handler name.</p></li>
+<li><p><strong>file_name</strong> (<em>string</em>) – Logs file name.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="helpers.logger.custom_logger.CustomLogger.set_logger">
+<code class="sig-name descname">set_logger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.custom_logger.CustomLogger.set_logger" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to set all the params for the Class Logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>Custom Logger object.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto</dt>
+<dd class="field-even"><p>Logger object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.logger.logger_manager">
+<span id="logger-manager"></span><h2><strong>logger_manager</strong><a class="headerlink" href="#module-helpers.logger.logger_manager" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="helpers.logger.logger_manager.LoggerManager">
+<em class="property">class </em><code class="sig-prename descclassname">helpers.logger.logger_manager.</code><code class="sig-name descname">LoggerManager</code><span class="sig-paren">(</span><em class="sig-param">logname</em>, <em class="sig-param">logevent</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.logger_manager.LoggerManager" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logname</strong> (<em>str.</em>) – Logs handler name.</p></li>
+<li><p><strong>logevent</strong> (<em>str.</em>) – Logs file name.</p></li>
+<li><p><strong>schema</strong> (<em>dict.</em>) – Data schema to validate with. Default value is None.</p></li>
+<li><p><strong>session</strong> (<em>Dict.</em>) – Dictionary with the data session. Default value is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Muestra</dt>
+<dd class="field-even"><p><strong>IOError</strong> – Error handeling the file.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="helpers.logger.logger_manager.LoggerManager.write_info">
+<code class="sig-name descname">write_info</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.logger_manager.LoggerManager.write_info" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict.</em>) – Dictionary with the info to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.logger.logger_manager.LoggerManager.write_error">
+<code class="sig-name descname">write_error</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.logger_manager.LoggerManager.write_error" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict.</em>) – Dictionary with the error to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.logger.logger_manager.LoggerManager.write_exception">
+<code class="sig-name descname">write_exception</code><span class="sig-paren">(</span><em class="sig-param">exc</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.logger.logger_manager.LoggerManager.write_exception" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to write a log excepción.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><p><strong>exc</strong> (<em>Exception Object.</em>) – Exception to write on log.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2019, Salvador Leon.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/helpers.logger.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

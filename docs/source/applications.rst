@@ -7,9 +7,8 @@
 .. toctree::
    :maxdepth: 1
    
-   applications.access
-   applications.client
    applications.core
+   applications.users
 
     
 .. automodule:: applications.__init__
