@@ -4,9 +4,3 @@
    
 .. automodule:: applications.client.templatetags.__init__
    :members:
-
-**my_templatetag **
-######################################################
-.. automodule:: applications.client.templatetags.my_templatetag 
-   :members:
- 

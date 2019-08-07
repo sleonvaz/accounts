@@ -24,6 +24,7 @@ services:
       - seth-network
     depends_on:
       - postgres
+
   postgres:
       image: postgres:11.2-alpine
       restart: always

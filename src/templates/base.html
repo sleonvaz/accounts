@@ -36,9 +36,12 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          {% if user.is_authenticated %}
-
-          {% endif %}
+            {% if user.is_staff %}
+                <a href="{% url 'signup_user' %}" class="btn btn-primary ml-2">Create User</a>
+            {% endif %}
+            {% if user.is_superuser %}
+                <a href="{% url 'signup_manager' %}" class="btn btn-primary ml-2">Create Admin</a>
+            {% endif %}
         </ul>
         {% if user.is_authenticated %}
           <ul class="navbar-nav">

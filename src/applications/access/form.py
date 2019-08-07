@@ -17,3 +17,17 @@ class ClientRegistrationForm(UserCreationForm):
             "password1",
             "password2"
         ]
+class AdminRegistrationForm(UserCreationForm):
+    """
+
+        Class to create a  Admin Form registration.
+    """
+    class Meta:
+        model = Account
+        fields = [
+            "name",
+            "last_name",
+            "email",
+            "password1",
+            "password2"
+        ]

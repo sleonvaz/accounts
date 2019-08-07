@@ -106,6 +106,174 @@
 </div>
 <div class="section" id="module-applications.client.views">
 <span id="views"></span><h2><strong>views</strong><a class="headerlink" href="#module-applications.client.views" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="class">
+<dt id="applications.client.views.ClientList">
+<em class="property">class </em><code class="sig-prename descclassname">applications.client.views.</code><code class="sig-name descname">ClientList</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientList" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Class to manage the Accounts list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>type</em>) – This param contain all the information associated to the request.</p></li>
+<li><p><strong>request</strong> – Request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The view to render.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>View</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="applications.client.views.ClientList.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#applications.client.views.ClientList.model" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>alias de <a class="reference internal" href="applications.core.html#applications.core.models.Account" title="applications.core.models.Account"><code class="xref py py-class docutils literal notranslate"><span class="pre">applications.core.models.Account</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="applications.client.views.ClientDetail">
+<em class="property">class </em><code class="sig-prename descclassname">applications.client.views.</code><code class="sig-name descname">ClientDetail</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientDetail" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Class to manage the Accounts deail.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>type</em>) – This param contain all the information associated to the request.</p></li>
+<li><p><strong>request</strong> – Request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The view to render.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>View</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="applications.client.views.ClientDetail.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#applications.client.views.ClientDetail.model" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>alias de <a class="reference internal" href="applications.core.html#applications.core.models.Account" title="applications.core.models.Account"><code class="xref py py-class docutils literal notranslate"><span class="pre">applications.core.models.Account</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="applications.client.views.ClientCreate">
+<em class="property">class </em><code class="sig-prename descclassname">applications.client.views.</code><code class="sig-name descname">ClientCreate</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientCreate" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Class to manage the Accounts create.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>type</em>) – This param contain all the information associated to the request.</p></li>
+<li><p><strong>request</strong> – Request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The view to render.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>View</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="applications.client.views.ClientCreate.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#applications.client.views.ClientCreate.model" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>alias de <a class="reference internal" href="applications.core.html#applications.core.models.Account" title="applications.core.models.Account"><code class="xref py py-class docutils literal notranslate"><span class="pre">applications.core.models.Account</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="applications.client.views.ClientCreate.fields">
+<code class="sig-name descname">fields</code><em class="property"> = '__all__'</em><a class="headerlink" href="#applications.client.views.ClientCreate.fields" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="applications.client.views.ClientUpdate">
+<em class="property">class </em><code class="sig-prename descclassname">applications.client.views.</code><code class="sig-name descname">ClientUpdate</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientUpdate" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Class to manage the Accounts update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>type</em>) – This param contain all the information associated to the request.</p></li>
+<li><p><strong>request</strong> – Request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The view to render.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>View</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="applications.client.views.ClientUpdate.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#applications.client.views.ClientUpdate.model" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>alias de <a class="reference internal" href="applications.core.html#applications.core.models.Account" title="applications.core.models.Account"><code class="xref py py-class docutils literal notranslate"><span class="pre">applications.core.models.Account</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="applications.client.views.ClientUpdate.fields">
+<code class="sig-name descname">fields</code><em class="property"> = ['name', 'last_name', 'email', 'iban']</em><a class="headerlink" href="#applications.client.views.ClientUpdate.fields" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="applications.client.views.ClientUpdate.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientUpdate.get_success_url" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to manage the view tp render after update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>The URL to render.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="applications.client.views.ClientDelete">
+<em class="property">class </em><code class="sig-prename descclassname">applications.client.views.</code><code class="sig-name descname">ClientDelete</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientDelete" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Class to manage the Accounts delete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>type</em>) – This param contain all the information associated to the request</p></li>
+<li><p><strong>request</strong> – Request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>The view to render</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>View</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="applications.client.views.ClientDelete.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#applications.client.views.ClientDelete.model" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>alias de <a class="reference internal" href="applications.core.html#applications.core.models.Account" title="applications.core.models.Account"><code class="xref py py-class docutils literal notranslate"><span class="pre">applications.core.models.Account</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="applications.client.views.ClientDelete.get_success_url">
+<code class="sig-name descname">get_success_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applications.client.views.ClientDelete.get_success_url" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Function to manage the view tp render after delete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devuelve</dt>
+<dd class="field-odd"><p>The URL to rende.</p>
+</dd>
+<dt class="field-even">Tipo del valor devuelto</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

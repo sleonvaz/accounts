@@ -16,8 +16,8 @@ class CustomLogger:
         """
 
         self.name_handler = name_handler
-        self.logdir = str(Path(__file__).parent.resolve().parent)
-        self.file_name = file_name
+        self.logdir = str(Path(__file__).parent.resolve().parent.parent) + '/logs/'
+        self.file_name = file_name + '.log'
         self.logger = logging.getLogger(self.name_handler)
         self.set_logger()
 
