@@ -1,0 +1,6 @@
+{"date": "2019-08-07 08:50:53.016", "name": "test_write_error", "level": "ERROR", "content": {"ip": "192.168.1.1", "request_uuid": "AS678234876834GSFA", "amount": "14.50", "currency": "EUR", "iban": "sin asignar"}}
+{"date": "2019-08-07 08:50:53.024", "name": "test_write_error_no_session", "level": "ERROR", "content": {"amount": "14.50", "currency": "EUR", "iban": "sin asignar"}}
+{"date": "2019-08-07 08:50:53.027", "name": "test_write_exception", "level": "ERROR", "content": {"ip": "192.168.1.1", "request_uuid": "AS678234876834GSFA", "exception_type": "<class Exception>", "exception_msg": "Mock Exception", "module": "/app/helpers/logger/tests.py", "line": 96}}
+{"date": "2019-08-07 08:50:53.031", "name": "test_write_exception_no_session", "level": "ERROR", "content": {"exception_type": "<class Exception>", "exception_msg": "Mock Exception", "module": "/app/helpers/logger/tests.py", "line": 81}}
+{"date": "2019-08-07 08:50:53.039", "name": "test_write_info", "level": "INFO", "content": {"ip": "192.168.1.1", "request_uuid": "AS678234876834GSFA", "amount": "14.50", "currency": "EUR", "iban": "sin asignar"}}
+{"date": "2019-08-07 08:50:53.045", "name": "test_write_info_no_session", "level": "INFO", "content": {"amount": "14.50", "currency": "EUR", "iban": "sin asignar"}}
