@@ -10,7 +10,7 @@ class TestLoggerManager(TestCase):
 
     def setUp(self):
 
-        self.logfile = 'test.log'
+        self.logfile = 'test'
         self.schema = {
             "amount": {"type": "string", "default": "sin asignar"},
             "currency": {"type": "string", "default": "sin asignar"},

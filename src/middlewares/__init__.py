@@ -1,4 +1,4 @@
 """
-    This directory is to create to middleware to intercepts the request before and after reach the view
+    This directory is to create middleware to intercepts the request before and after reach the view
 
 """

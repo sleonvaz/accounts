@@ -8,10 +8,9 @@ from django.db.models import Max
 from helpers.logger import LoggerManager
 
 
-
 def signup(request):
     """
-    Function to sing up user that not are admins
+    Function to sing up user that are not admins
 
     :param request: This param contain all the information associated to the request
     :param type request: Request
@@ -49,7 +48,7 @@ def signup(request):
 @login_required(login_url='/accounts/login/')
 def signup_user(request):
     """
-    Function to sing up user that not are admins
+    Function to sing up user that are not admins
 
     :param request: This param contain all the information associated to the request
     :param type request: Request

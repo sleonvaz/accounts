@@ -25,7 +25,7 @@ class ClientList(ListView):
 class ClientDetail(DetailView):
     """
 
-         Class to manage the Accounts deail.
+         Class to manage the Accounts detail.
 
          :param request: This param contain all the information associated to the request.
          :param type request: Request
@@ -67,14 +67,13 @@ class ClientUpdate(UpdateView):
     def get_success_url(self):
         """
 
-        Function to manage the view tp render after update.
+        Function to manage the view to render after update.
 
         :return: The URL to render.
         :rtype: str
         """
         view_name = 'client_list'
         return reverse(view_name)
-
 
 
 class ClientDelete(DeleteView):
@@ -92,9 +91,9 @@ class ClientDelete(DeleteView):
     def get_success_url(self):
         """
 
-           Function to manage the view tp render after delete.
+           Function to manage the view to render after delete.
 
-           :return: The URL to rende.
+           :return: The URL to render.
            :rtype: str
            """
         view_name = 'client_list'

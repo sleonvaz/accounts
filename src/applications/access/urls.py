@@ -1,6 +1,6 @@
 from django.urls import path, include
 from applications.access import views
-from helpers.startup import create_default_superadmin
+
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),

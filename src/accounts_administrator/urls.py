@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from helpers.startup import create_default_superadmin
+
 
 urlpatterns = [
 

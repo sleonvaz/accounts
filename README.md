@@ -29,7 +29,7 @@ ___
     
        - Admisitrators are able to do a CRUD.
         
-- Restrict manipulation operations on a user to the administrator who created them
+- Restrict manipulation operations on an user to the administrator who created them
     
         - Admisitrators are able to do a CRUD on the users that they created only
           
@@ -64,14 +64,14 @@ Voluntary to get more points for the task:
             - Admisitrators can see the others administrators users.
             - Superuser can create administrators, and do a CRUD to clients.
             - Users can change their password.          
-            - Autodoc library to auto generate proyect documentation as an html rindust-task/docs/build/html/index.html
+            - Autodoc library to auto generate project documentation as an html rindus-task/docs/build/html/index.html
               (open in browser).
             - Helper Logger to log the app.
             - Cerberus library to validate an normalize data structures.        
 ---
 ## **Documentation**<a name="documentation"></a>
-The project documentation is an html to access just link on this link:
-[Proyect documentation](/docs/build/html/index.html)
+The project documentation is an html to access click on this link:
+[Project documentation](/docs/build/html/index.html)
 
 ---
        
@@ -91,7 +91,7 @@ ___
 To create a superuser open a terminal, **while project is running** and **in the project folder 'src'** 
 exec the next command:
 ````
-docker-compose exec seth python manage.py createsuperuser
+docker exec -ti rindus-task_app_1 python manage.py createsuperuse
 ````
 Then follow the instructions:
 1. username
@@ -104,7 +104,7 @@ ___
 | SERVICE       |    ENDPOINT               |   USER     |   PASSWORD |
 | --------------|:-------------------------:|:----------:|:----------:|
 | postgres-11   |  http://localhost:3333    |   root     |   root     |          
-| seth          |  http://localhost:8000    |   no       |   no       |     
+| app           |  http://localhost:8000    |   no       |   no       |     
  
 
 ## **Urls**<a name="urls"></a>

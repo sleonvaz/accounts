@@ -130,7 +130,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>Restrict manipulation operations on a user to the administrator who created them</p>
+<li><p>Restrict manipulation operations on an user to the administrator who created them</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Admisitrators</span> <span class="k">are</span> <span class="n">able</span> <span class="k">to</span> <span class="k">do</span> <span class="n">a</span> <span class="n">CRUD</span> <span class="k">on</span> <span class="n">the</span> <span class="n">users</span> <span class="n">that</span> <span class="n">they</span> <span class="n">created</span> <span class="k">only</span>
 </pre></div>
 </div>
@@ -170,7 +170,7 @@
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">Admisitrators</span> <span class="n">can</span> <span class="n">see</span> <span class="n">the</span> <span class="n">others</span> <span class="n">administrators</span> <span class="n">users</span><span class="p">.</span>
 <span class="o">-</span> <span class="n">Superuser</span> <span class="n">can</span> <span class="k">create</span> <span class="n">administrators</span><span class="p">,</span> <span class="k">and</span> <span class="k">do</span> <span class="n">a</span> <span class="n">CRUD</span> <span class="k">to</span> <span class="n">clients</span><span class="p">.</span>
 <span class="o">-</span> <span class="n">Users</span> <span class="n">can</span> <span class="n">change</span> <span class="n">their</span> <span class="n">password</span><span class="p">.</span>
-<span class="o">-</span> <span class="n">Autodoc</span> <span class="n">library</span> <span class="k">to</span> <span class="n">auto</span> <span class="n">generate</span> <span class="n">proyect</span> <span class="n">documentation</span> <span class="k">as</span> <span class="n">an</span> <span class="n">html</span> <span class="n">rindust</span><span class="o">-</span><span class="n">task</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span>
+<span class="o">-</span> <span class="n">Autodoc</span> <span class="n">library</span> <span class="k">to</span> <span class="n">auto</span> <span class="n">generate</span> <span class="n">project</span> <span class="n">documentation</span> <span class="k">as</span> <span class="n">an</span> <span class="n">html</span> <span class="n">rindus</span><span class="o">-</span><span class="n">task</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span>
   <span class="p">(</span><span class="k">open</span> <span class="k">in</span> <span class="n">browser</span><span class="p">).</span>
 <span class="o">-</span> <span class="n">Helper</span> <span class="n">Logger</span> <span class="k">to</span> <span class="n">log</span> <span class="n">the</span> <span class="n">app</span><span class="p">.</span>
 <span class="o">-</span> <span class="n">Cerberus</span> <span class="n">library</span> <span class="k">to</span> <span class="n">validate</span> <span class="n">an</span> <span class="n">normalize</span> <span class="k">data</span> <span class="n">structures</span><span class="p">.</span>
@@ -184,8 +184,8 @@
 <hr class="docutils" />
 <div class="section" id="documentation-a-name-documentation-a">
 <h2><strong>Documentation</strong><span class="raw-html-m2r"><a name="documentation"></a></span><a class="headerlink" href="#documentation-a-name-documentation-a" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>The project documentation is an html to access just link on this link:
-<a class="reference external" href="/docs/build/html/index.html">Proyect documentation</a></p>
+<p>The project documentation is an html to access click on this link:
+<a class="reference external" href="/docs/build/html/index.html">Project documentation</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="prerequirements-a-name-rerequirements-a">
@@ -202,7 +202,7 @@
 <h2><strong>Creating Django superadmin</strong><span class="raw-html-m2r"><a name="creating-django-superadmin"></a></span><a class="headerlink" href="#creating-django-superadmin-a-name-creating-django-superadmin-a" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>To create a superuser open a terminal, <strong>while project is running</strong> and <strong>in the project folder “src”</strong>
 exec the next command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="k">exec</span> <span class="n">seth</span> <span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">createsuperuser</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="k">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="n">rindus</span><span class="o">-</span><span class="n">task_app_1</span> <span class="n">python</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">createsuperuse</span>
 </pre></div>
 </div>
 <p>Then follow the instructions:</p>
@@ -235,7 +235,7 @@ exec the next command:</p>
 <td><p>root</p></td>
 <td><p>root</p></td>
 </tr>
-<tr class="row-odd"><td><p>seth</p></td>
+<tr class="row-odd"><td><p>app</p></td>
 <td><p><a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></td>
 <td><p>no</p></td>
 <td><p>no</p></td>
