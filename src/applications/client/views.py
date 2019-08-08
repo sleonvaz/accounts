@@ -76,7 +76,7 @@ class ClientUpdate(UpdateView):
         return reverse(view_name)
 
 
-@method_decorator(login_required, name='dispatch')
+
 class ClientDelete(DeleteView):
     """
 

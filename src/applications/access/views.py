@@ -6,7 +6,7 @@ from applications.access.forms import ClientRegistrationForm, AdminRegistrationF
 from applications.core.models import Clients, Account
 from django.db.models import Max
 from helpers.logger import LoggerManager
-from helpers.startup import create_default_superadmin
+
 
 
 def signup(request):
